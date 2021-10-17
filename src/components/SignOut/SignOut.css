@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+.signout {
+    position: absolute;
+    top: 28px;
+    left: 15px;
+    font-size: 1.5em;
+    color: rgb(214, 212, 212);
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+}
+
+.signout:hover {
+    text-decoration-line: underline;
+}

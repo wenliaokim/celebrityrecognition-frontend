@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap'); */
 
 h1 {
     font-family: 'Black Ops One', cursive;
     font-size: 2.5em;
     color: #abc4ff; 
     letter-spacing: 5px;
-    margin-bottom: 100px;
 }
 
-.signout {
+/* .signout {
     position: absolute;
     top: 28px;
     left: 10px;
     font-size: 1.5em;
     color: rgb(214, 212, 212);
     font-family: 'Josefin Sans', sans-serif;
-}
+} */

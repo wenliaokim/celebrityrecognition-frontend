@@ -2,6 +2,9 @@ import React from 'react';
 import Clarifai from 'clarifai';
 import Particles from 'react-particles-js';
 import Logo from './components/Logo/Logo';
+import SignIn from './components/SignIn/SignIn';
+import SignOut from './components/SignOut/SignOut';
+import Register from './components/Register/Register';
 import LinkInputBox from './components/LinkInputBox/LinkInputBox';
 import ImageForm from './components/ImageForm/ImageForm';
 import './App.css';
@@ -29,7 +32,8 @@ class App extends React.Component {
       input: '',
       imageUrl: '',
       faceBox: {},
-      celebrity: {}
+      celebrity: {},
+      route: 'signin'
     }
   }
 
@@ -71,13 +75,31 @@ class App extends React.Component {
     .catch(err => console.log(err));
   }
 
+  onRouteChange = (changedRoute) => {
+    this.setState({route:changedRoute});
+  }
+
   render() {
     return (
       <div className="App">
-        <Logo />
-        <LinkInputBox onInputChange={this.onInputChange} onButtonSubmit={this.onButtonSubmit}/>
-        <ImageForm imageUrl={this.state.imageUrl} celebrity={this.state.celebrity} faceBox={this.state.faceBox}/>
+        <Logo/>
         <Particles className='particle' params={particlesOptions}/>
+        {this.state.route === 'signin' 
+          ? <SignIn onRouteChange={this.onRouteChange}/>
+          : (this.state.route === 'register' 
+            ? <Register onRouteChange={this.onRouteChange}/>
+            : <div>
+                <SignOut onRouteChange={this.onRouteChange}/>
+                <LinkInputBox 
+                  onInputChange={this.onInputChange} 
+                  onButtonSubmit={this.onButtonSubmit}/>
+                <ImageForm 
+                  imageUrl={this.state.imageUrl} 
+                  celebrity={this.state.celebrity} 
+                  faceBox={this.state.faceBox}/>
+              </div>
+            )
+        }
       </div>
     );
   }

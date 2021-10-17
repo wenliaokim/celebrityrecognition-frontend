@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
+
+.inputContainer {
+    margin-top: 100px;
+}
+
 .imageInputBox {
     width: 60%;
 }

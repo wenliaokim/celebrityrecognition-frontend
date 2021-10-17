@@ -1,14 +1,14 @@
 import Tilt from 'react-tilt';
 import './Logo.css';
 
-const Logo = () => {
+const Logo = (onRouteChange) => {
     return (
         <div>
             <div>
                 <Tilt className="Tilt" options={{ max : 20 }}>
                 <div className="Tilt-inner"><h1>Celebrity Recognition</h1></div>
                 </Tilt>
-                <div className='signout'>Sign out</div>
+                {/* <div className='signout'>Sign out</div> */}
             </div>
         </div>
     );

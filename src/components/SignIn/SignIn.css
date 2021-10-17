@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+
+.signInBackground {
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* height: 100vh; */
+  overflow: hidden;
+  /* margin: 0; */
+  margin-top: 50px;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 40px;
+  border-radius: 5px;
+  width: 400px;
+  height: 500px;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: 'Russo One', sans-serif;
+  font-size: 1.8em;
+  color: #c1d3fe;
+
+}
+
+.container a {
+  text-decoration: none;
+  color: lightblue;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  background: #c1d3fe;
+  padding: 15px;
+  font-family: inherit;
+  font-family: 'Roboto Mono', sans-serif;
+  font-size: 16px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.btn:focus {
+  outline: 0;
+}
+.btn:hover {
+    transform: scale(1.1);
+}
+
+/* .btn:active {
+  transform: scale(0.98);
+} */
+
+.textForRegister {
+    margin-top: 45px;
+}
+
+.textForRegister, .register {
+    font-size: 1.2em;
+    font-family: 'Roboto Mono', sans-serif;
+    color: whitesmoke;
+}
+
+.register {
+    margin-top: 10px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    text-decoration-line: underline;
+    transition: ease-in-out;
+    color: #c1d3fe;
+}
+
+.register:hover {
+    transform: scale(1.1);
+}
+
+.form-control {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 300px;
+}
+
+.form-control input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: #c1d3fe;  
+}
+
+
+::-webkit-input-placeholder {
+    color: white;
+}
