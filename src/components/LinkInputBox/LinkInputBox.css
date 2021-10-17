@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+.imageInputBox {
+    width: 60%;
+}
+.input {
+    border: 1px solid #495064;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.button {
+    background-color: #46506e4a;
+    color: #e5e5e5;
+    font-size: 1.3em;
+    text-align: center;
+    border: 1px solid #555E7A;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 5px;
+    transition: ease-in-out;
+}
+
+.button:hover {
+    color: #abbde7;
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1.3em;
+    font-family: 'Roboto Mono', monospace;
+    /* color: rgb(212, 211, 211); */
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
