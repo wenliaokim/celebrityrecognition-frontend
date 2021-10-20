@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
+
+.userdata {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.3em;
+    font-family: 'Roboto Mono', monospace;
+    margin-top: 100px;
+    margin-bottom: 90px;
+    line-height: 1.5em;
+    /* color: #aabce9;
+    -webkit-text-stroke: 0.5px whitesmoke; */
+    color: whitesmoke;
+}

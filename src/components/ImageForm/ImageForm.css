@@ -26,11 +26,13 @@
 }
 
 .waiting {
-    margin-top: 150px;
+    margin-top: 100px;
     font-family: 'Roboto Mono', monospace;
-    font-size: 2em;
-    color: whitesmoke;
-    letter-spacing: 0.5em;
+    font-size: 1.5em;
+    /* color: whitesmoke; */
+    letter-spacing: 0.3em;
+    color: #aabce9;
+    -webkit-text-stroke: 0.2px whitesmoke;
 }
 
 .bounding-box {

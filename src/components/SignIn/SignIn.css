@@ -23,13 +23,13 @@
   height: 500px;
 }
 
-.container h1 {
+.logintitle {
   text-align: center;
   margin-bottom: 40px;
   font-family: 'Russo One', sans-serif;
   font-size: 1.8em;
   color: #c1d3fe;
-
+  text-shadow: none;
 }
 
 .container a {

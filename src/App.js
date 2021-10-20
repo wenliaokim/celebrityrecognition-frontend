@@ -5,6 +5,7 @@ import Logo from './components/Logo/Logo';
 import SignIn from './components/SignIn/SignIn';
 import SignOut from './components/SignOut/SignOut';
 import Register from './components/Register/Register';
+import UserData from './components/UserData/UserData';
 import LinkInputBox from './components/LinkInputBox/LinkInputBox';
 import ImageForm from './components/ImageForm/ImageForm';
 import './App.css';
@@ -33,8 +34,25 @@ class App extends React.Component {
       imageUrl: '',
       faceBox: {},
       celebrity: {},
-      route: 'signin'
+      route: 'signin',
+      user: {
+        id: '', 
+        username: '',
+        email: '',
+        entries: 0,
+        joined: ''
+      }
     }
+  }
+
+  loadUser = (data) => {
+    this.setState({user: {
+      id: data.id, 
+      username: data.username,
+      email: data.email,
+      entries: data.entries,
+      joined: data.joined,}
+    })
   }
 
   onInputChange = (event) => {
@@ -69,6 +87,19 @@ class App extends React.Component {
     this.setState({imageUrl: this.state.input});
     app.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
     .then(response => {
+      if (response) {
+        fetch('http://localhost:3000/image', {
+          method: 'put',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({
+            id: this.state.user.id,
+          })
+        })
+        .then(response => response.json())
+        .then(count => {
+          this.setState(Object.assign(this.state.user, { entries: count}))
+        })
+      }
       this.guessCelebrity(response);
       this.calculateFacePosition(response);
     })
@@ -78,6 +109,10 @@ class App extends React.Component {
   onRouteChange = (changedRoute) => {
     this.setState({route:changedRoute});
   }
+  
+  onSignOutChange = () => {
+    this.setState({imageUrl:''});
+  }
 
   render() {
     return (
@@ -85,11 +120,12 @@ class App extends React.Component {
         <Logo/>
         <Particles className='particle' params={particlesOptions}/>
         {this.state.route === 'signin' 
-          ? <SignIn onRouteChange={this.onRouteChange}/>
+          ? <SignIn loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
           : (this.state.route === 'register' 
-            ? <Register onRouteChange={this.onRouteChange}/>
+            ? <Register loadUser={this.loadUser} onRouteChange={this.onRouteChange}/>
             : <div>
-                <SignOut onRouteChange={this.onRouteChange}/>
+                <SignOut onSignOutChange={this.onSignOutChange} onRouteChange={this.onRouteChange}/>
+                <UserData username={this.state.user.username} entries={this.state.user.entries}/>
                 <LinkInputBox 
                   onInputChange={this.onInputChange} 
                   onButtonSubmit={this.onButtonSubmit}/>

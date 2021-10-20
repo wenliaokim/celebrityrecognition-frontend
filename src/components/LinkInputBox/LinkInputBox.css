@@ -2,9 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@700&display=swap');
 
 
-.inputContainer {
+/* .inputContainer {
     margin-top: 100px;
-}
+} */
 
 .imageInputBox {
     width: 60%;
@@ -31,9 +31,10 @@
 }
 
 p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: 'Roboto Mono', monospace;
-    /* color: rgb(212, 211, 211); */
-    color: whitesmoke;
-    margin-bottom: 40px;
+    /* color: whitesmoke; */
+    margin-bottom: 10px;
+    color: #aabce9;
+    -webkit-text-stroke: 0.2px whitesmoke;
 }

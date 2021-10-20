@@ -12,27 +12,27 @@
   /* height: 100vh; */
   overflow: hidden;
   /* margin: 0; */
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-.container {
+.register_container {
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px 40px;
   border-radius: 5px;
   width: 400px;
-  height: 500px;
+  height: 560px;
 }
 
-.container h1 {
+.registertitle {
   text-align: center;
   margin-bottom: 40px;
   font-family: 'Russo One', sans-serif;
   font-size: 1.8em;
   color: #c1d3fe;
-
+  text-shadow: none;
 }
 
-.container a {
+.register_container a {
   text-decoration: none;
   color: lightblue;
 }
@@ -62,11 +62,11 @@
 } */
 
 .textForLogin {
-    margin-top: 45px;
+    margin-top: 30px;
 }
 
 .textForLogin, .login {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Roboto Mono', sans-serif;
     color: whitesmoke;
 }
