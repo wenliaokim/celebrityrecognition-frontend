@@ -1,11 +1,10 @@
 import './SignOut.css';
 
-const SignOut = ({onSignOutChange, onRouteChange}) => {
+const SignOut = ({onRouteChange}) => {
     return (
         <div>
             <div onClick={() => {
-                onRouteChange('signin');
-                onSignOutChange();}} 
+                onRouteChange('signin')}} 
             className='signout'>Sign out</div>
         </div>
     );
