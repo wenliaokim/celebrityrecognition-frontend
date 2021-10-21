@@ -73,7 +73,7 @@ class App extends React.Component {
     app.models.predict(Clarifai.CELEBRITY_MODEL, this.state.input)
     .then(response => {
       if (response) {
-        fetch('http://localhost:3000/image', {
+        fetch('https://stark-temple-20098.herokuapp.com/image', {
           method: 'put',
           headers: {'Content-Type': 'application/json'},
           body: JSON.stringify({
